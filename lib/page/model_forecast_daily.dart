@@ -20,7 +20,7 @@ class ModelForecastDaily {
     strDate = json['list']['dt_txt'].toString();
   }
   static List<ModelForecastDaily> fromJsonList(List list) {
-    if (list.length == 0) return List<ModelForecastDaily>.empty();
+    if (list.isEmpty) return List<ModelForecastDaily>.empty();
     return list.map((item) => ModelForecastDaily.fromJson(item)).toList();
   }
 }
